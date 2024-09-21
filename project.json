@@ -1,0 +1,20 @@
+{
+	"author": "Jan Pavelka (www.phoca.cz)",
+	"authorUrl": "https://www.phoca.cz",
+	"copyright": "Jan Pavelka",
+	"license": "GNU/GPL",
+	"projectName": "PhocaCartShippingCeskapostaPlugin",
+	"extensionName": "Phoca Cart Shipping Česká pošta Plugin",
+	"projectInitials" : "PC",				  
+	"description": "Phoca Cart Shipping - Shipping Česká pošta Plugin - shipping method for Phoca Cart component.",
+	"projectUrl": "https://www.phoca.cz/phocacart-extensions/2-plugins/127-phoca-cart-shipping-ceska-posta-plugin",
+	"projectDocumentationUrl": "https://www.phoca.cz/documentation/category/115-phoca-cart",
+	"projectMainComponent": "Phoca Cart",
+	"projectMainComponentInfoUrl": "https://www.phoca.cz/project/phocacart-joomla-ecommerce",
+	"projectDemo" : {
+		"Joomla! - Phoca Cart Demo": "https://www.phoca.cz/phocacartdemo/",
+		"Joomla! - Phoca Cart - Phoca Premiere Template Demo": "https://www.phoca.cz/phocacartdemo/premiere/"
+	},
+	"projectColor": "#129ed9",
+	"projectBranch": "main"
+}

@@ -1,0 +1,50 @@
+.ph-checkout-ceskaposta-box {
+    margin-left: 1em;
+}
+
+.ph-checkout-ceskaposta-box .btn.ph-btn-ceskaposta-select-pickup-point {
+    background: #1d3176;
+    color: #fff;
+}
+
+.ph-checkout-shipping-info-box.ph-checkout-ceskaposta-info-box {
+   /*display: inline-block;*/
+   clear:both;
+   display: inline-flex;
+   margin: 0;
+   padding: 0;
+   padding-left: 0.25em;
+}
+
+.ph-checkout-ceskaposta-info-name {
+    padding: 0.5em;
+}
+.ph-checkout-ceskaposta-info-container {
+    margin-top: 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ph-checkout-ceskaposta-info-label {
+    padding-top: 0;
+}
+
+.ph-checkout-ceskaposta-box .ph-checkout-ceskaposta-info-opening-hours {
+    padding: 0;
+    font-size: small;
+    margin-left: -1em;
+    margin-right: -1em;
+}
+
+.ph-checkout-ceskaposta-info-opening-hours > div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    grid-gap: 0.25rem;
+}
+
+.ph-checkout-ceskaposta-info-opening-hours > div > div{
+    
+}
+
+.ph-checkout-ceskaposta-info-photo img {
+    border-radius: 3px;
+}
