@@ -204,14 +204,17 @@ class plgPCSShipping_Ceskaposta extends CMSPlugin
 		$registry->loadString($item->params);
 		$item->params = $registry;
 
+		// Be aware this instance of plugin can be used for more shipping options, this is why we use id array
+		// because each shipping option can have different parameters
 
+		$id					= (int)$item->id;
 		$oParams 			= array();
         //$oParams['apiKey']	= '';// Not needed, don't display it in Frontend Javascript $item->params->get('api_key', '');
 		//$oParams['type'] = $item->params->get('type', 'BALIKOVNY');
-		$oParams['fields']	= $this->getBranchFields();
-		$oParams['validate_pickup_point']	= $item->params->get('validate_pickup_point', 1);
-		$oParams['display_opening_hours']   = $this->params->get('display_opening_hours', 0);
-		$oParams['display_branch_photo']   = $this->params->get('display_branch_photo', 0);
+		$oParams[$id]['fields']	= $this->getBranchFields();
+		$oParams[$id]['validate_pickup_point']	= $item->params->get('validate_pickup_point', 1);
+		$oParams[$id]['display_opening_hours']   = $item->params->get('display_opening_hours', 0);
+		$oParams[$id]['display_branch_photo']   = $item->params->get('display_branch_photo', 0);
 
 		$oLang   = array(
 			'MONDAY' => Text::_('MONDAY'),

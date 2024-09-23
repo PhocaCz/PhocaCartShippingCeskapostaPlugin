@@ -16,6 +16,28 @@
    padding-left: 0.25em;
 }
 
+.ph-checkout-ceskaposta-box {
+    container-type: inline-size;
+    container-name: phCheckoutCeskapostaBox;
+}
+
+@container phCheckoutCeskapostaBox (max-width: 15em) {
+    .ph-checkout-shipping-info-box.ph-checkout-ceskaposta-info-box {
+        display:block;
+    }
+}
+
+.ph-checkout-shipping-row-item {
+    container-type: inline-size;
+    container-name: phCheckoutShippingRowItem;
+}
+
+@container phCheckoutShippingRowItem (max-width: 34em) {
+    .ph-checkout-shipping-info-box.ph-checkout-ceskaposta-info-box {
+        display: block;
+    }
+}
+
 .ph-checkout-ceskaposta-info-name {
     padding: 0.5em;
 }

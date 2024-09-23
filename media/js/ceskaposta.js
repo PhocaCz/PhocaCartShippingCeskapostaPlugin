@@ -42,12 +42,12 @@ async function showCeskapostaSelectedPickupPoint(point) {
         selectedShippingMethodSuffix = '-' + selectedShippingMethod;
         infoElement = document.getElementById('ceskaposta-point-info' + selectedShippingMethodSuffix);
     }
-    
+
     if (point) {
         /* Display Branch info immediately */
         let info = '';
         let photo = '';
-        if (phParamsPlgPcsCeskaposta['display_branch_photo'] == 1) {
+        if (phParamsPlgPcsCeskaposta[selectedShippingMethod]['display_branch_photo'] == 1) {
             if (point.zip) {
                 let imageUrl = 'https://www.postaonline.cz/documents/13422/6263672/' + point.zip + '_exterior_1_400x300.jpg';
             
@@ -62,7 +62,7 @@ async function showCeskapostaSelectedPickupPoint(point) {
         info += '<div class="ph-checkout-ceskaposta-info-name">' + point.name + ", " + point.zip + " " + point.municipality_name + '</div>';
 
         let openHours = '';
-        if (phParamsPlgPcsCeskaposta['display_opening_hours'] == 1) {
+        if (phParamsPlgPcsCeskaposta[selectedShippingMethod]['display_opening_hours'] == 1) {
             if (point.opening_hours) {
                 point.opening_hours.forEach((val, idx) => {
                     if (val) {
@@ -86,9 +86,9 @@ async function showCeskapostaSelectedPickupPoint(point) {
         infoElement.innerHTML = info;
     
         /* Add Branch info to form fields - to store them */
-        if (phParamsPlgPcsCeskaposta['fields'].length !== 0) {
-            for (let index = 0; index < phParamsPlgPcsCeskaposta['fields'].length; ++index) {
-                const element = phParamsPlgPcsCeskaposta['fields'][index];
+        if (phParamsPlgPcsCeskaposta[selectedShippingMethod]['fields'].length !== 0) {
+            for (let index = 0; index < phParamsPlgPcsCeskaposta[selectedShippingMethod]['fields'].length; ++index) {
+                const element = phParamsPlgPcsCeskaposta[selectedShippingMethod]['fields'][index];
                 let elementId = 'ceskaposta-field-' + element + selectedShippingMethodSuffix;
 
                 if (document.getElementById(elementId)){
@@ -99,7 +99,7 @@ async function showCeskapostaSelectedPickupPoint(point) {
                             document.getElementById(elementId).value = '';
                         }
                     } else if (element == 'opening_hours') { 
-                        if (phParamsPlgPcsCeskaposta['display_opening_hours'] == 1) {
+                        if (phParamsPlgPcsCeskaposta[selectedShippingMethod]['display_opening_hours'] == 1) {
                             document.getElementById(elementId).value = openHours;
                         }
                     } else {
@@ -113,9 +113,9 @@ async function showCeskapostaSelectedPickupPoint(point) {
     } else {
         infoElement.innerText = phLangPlgPcsCeskaposta['PLG_PCS_SHIPPING_CESKAPOSTA_NONE'];
         /* Add Branch info to form fields - clear all values */
-        if (phParamsPlgPcsCeskaposta['fields'].length !== 0) {
-            for (let index = 0; index < phParamsPlgPcsCeskaposta['fields'].length; ++index) {
-                const element = phParamsPlgPcsCeskaposta['fields'][index];
+        if (phParamsPlgPcsCeskaposta[selectedShippingMethod]['fields'].length !== 0) {
+            for (let index = 0; index < phParamsPlgPcsCeskaposta[selectedShippingMethod]['fields'].length; ++index) {
+                const element = phParamsPlgPcsCeskaposta[selectedShippingMethod]['fields'][index];
                 var elementId = 'ceskaposta-field-' + element;
                 document.getElementById(elementId).value = '';
             }
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let ceskapostaCheckbox = document.getElementById('ceskaposta-checkbox-id' + selectedShippingMethodSuffix).value;
         let ceskapostaCheckboxChecked = document.getElementById(ceskapostaCheckbox).checked;
 
-        if (phParamsPlgPcsCeskaposta['validate_pickup_point'] == 1 && ceskapostaCheckboxChecked && elementDocIdValue == '') {
+        if (phParamsPlgPcsCeskaposta[selectedShippingMethod]['validate_pickup_point'] == 1 && ceskapostaCheckboxChecked && elementDocIdValue == '') {
             e.preventDefault();
             alert(phLangPlgPcsZasilkovna['PLG_PCS_SHIPPING_CESKAPOSTA_ERROR_PLEASE_SELECT_PICK_UP_POINT']);
             return false;
