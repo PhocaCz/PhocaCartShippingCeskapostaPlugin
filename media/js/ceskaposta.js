@@ -158,7 +158,8 @@ window.addEventListener('message', iframeListener);
 
 /* Test if method is selected */
 document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector('.ph-checkout-shipping-save .ph-btn').onclick = function(e) {
+    let button = document.querySelector('.ph-checkout-shipping-save .ph-btn');
+    button.addEventListener('click', function(e) {
         
         let selectedShippingMethodSuffix = '';
         let selectedShippingMethod = phGetCeskapostaSelectedShippingMethod();
@@ -169,16 +170,19 @@ document.addEventListener("DOMContentLoaded", function() {
         
         let elementId = 'ceskaposta-field-id' + selectedShippingMethodSuffix;
         let elementDocId = document.getElementById(elementId);
-        let elementDocIdValue = elementDocId.value;
+        if (elementDocId) {
+            let elementDocIdValue = elementDocId.value;
 
-        let ceskapostaCheckbox = document.getElementById('ceskaposta-checkbox-id' + selectedShippingMethodSuffix).value;
-        let ceskapostaCheckboxChecked = document.getElementById(ceskapostaCheckbox).checked;
+            let ceskapostaCheckbox = document.getElementById('ceskaposta-checkbox-id' + selectedShippingMethodSuffix).value;
+            let ceskapostaCheckboxChecked = document.getElementById(ceskapostaCheckbox).checked;
 
-        if (phParamsPlgPcsCeskaposta[selectedShippingMethod]['validate_pickup_point'] == 1 && ceskapostaCheckboxChecked && elementDocIdValue == '') {
-            e.preventDefault();
-            alert(phLangPlgPcsZasilkovna['PLG_PCS_SHIPPING_CESKAPOSTA_ERROR_PLEASE_SELECT_PICK_UP_POINT']);
-            return false;
+            if (phParamsPlgPcsCeskaposta[selectedShippingMethod]['validate_pickup_point'] == 1 && ceskapostaCheckboxChecked && elementDocIdValue == '') {
+                e.preventDefault();
+                alert(phLangPlgPcsCeskaposta['PLG_PCS_SHIPPING_CESKAPOSTA_ERROR_PLEASE_SELECT_PICK_UP_POINT']);
+                return false;
+            }
         }
+        return;
         
-    };
+    });
 });

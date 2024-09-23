@@ -11,7 +11,7 @@
 		<downloads>
 			<downloadurl type="full" format="zip">https://github.com/PhocaCz/PhocaCartShippingCeskapostaPlugin/releases/download/5.0.0/plg_pcs_shipping_ceskaposta_v5.0.0.zip</downloadurl>
 		</downloads>
-		<sha512>f0c113bb8eb3ed022aba70d13b2b80f10cc08b52f7f8c1db7d8f80fe4baa9d022eda2235fd7fa7e84fd66db52d87691576270de4e0fa5a9d28bc541e3e06f75e</sha512>
+		<sha512>aa33da65bb169bbf91339c83c4dd1cba90e042778c1242eb972cdeb10d3db371cebfb92ec5ba99a8384c7d598be03136b5d963a798d1056bc2879d8056ce89a7</sha512>
 		<tags>
 			<tag>stable</tag>
 		</tags>
