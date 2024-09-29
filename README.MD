@@ -56,7 +56,7 @@ Phoca Cart Shipping - Shipping Česká pošta Plugin - shipping method for Phoca
 
 ## Version (Joomla! 5.x)
 
-5.0.0
+5.0.1
 
 
 
