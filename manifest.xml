@@ -6,12 +6,12 @@
 		<element>shipping_ceskaposta</element>
 		<folder>pcs</folder>
 		<type>plugin</type>
-		<version>5.0.1</version>
-		<infourl title="Phoca Cart Shipping Česká pošta Plugin 5.0.1">https://www.phoca.cz/</infourl>
+		<version>5.0.2</version>
+		<infourl title="Phoca Cart Shipping Česká pošta Plugin 5.0.2">https://www.phoca.cz/</infourl>
 		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/PhocaCz/PhocaCartShippingCeskapostaPlugin/releases/download/5.0.1/plg_pcs_shipping_ceskaposta_v5.0.1.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://github.com/PhocaCz/PhocaCartShippingCeskapostaPlugin/releases/download/5.0.2/plg_pcs_shipping_ceskaposta_v5.0.2.zip</downloadurl>
 		</downloads>
-		<sha512>7fb627a668d170cbf84ca6bddd3e9d4e62bbc213af47b40b1ad329ef714e8555f234663dc5c040b76a186d0c9404cf1b718664f1636bd0f013fdb2349a5d44a2</sha512>
+		<sha512>aaf9e97084dbfdc5825600f380ca5907dc76b64c09b2f8bed667a65d2b90a7df3880c5d32ff509d5b8d8c694cb02490f0bfce07ff1f0effd2124734eb19430ba</sha512>
 		<tags>
 			<tag>stable</tag>
 		</tags>

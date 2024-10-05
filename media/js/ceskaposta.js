@@ -137,6 +137,17 @@ function phCheckImageExists(url) {
     });
 }
 
+function closeCeskapostaModal() {
+    let selectedShippingMethod = phGetCeskapostaSelectedShippingMethod();
+    if (phParamsPlgPcsCeskaposta[selectedShippingMethod]['theme'] == 'uikit') {
+        let modal = UIkit.modal('#phPcsCeskaPostaPopup' + selectedShippingMethod);
+        modal.hide();
+    } else {
+        let modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('phPcsCeskaPostaPopup' + selectedShippingMethod));
+        modal.hide();
+    }
+}
+
 /* Listen to Ceska Posta */
 function iframeListener(e) {
     if (!e.origin.startsWith('https://b2c.cpost.cz')) {
@@ -148,10 +159,8 @@ function iframeListener(e) {
     }
               
     if (e.data.message === 'pickerResult') {
-
         showCeskapostaSelectedPickupPoint(e.data.point);
-        let modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('phPcsCeskaPostaPopup'));
-		modal.hide();
+        closeCeskapostaModal();
     }
 }
 window.addEventListener('message', iframeListener);

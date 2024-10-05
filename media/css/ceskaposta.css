@@ -5,23 +5,24 @@
 .ph-checkout-ceskaposta-box .btn.ph-btn-ceskaposta-select-pickup-point {
     background: #1d3176;
     color: #fff;
+    margin: 0.25em 0;
 }
 
 .ph-checkout-shipping-info-box.ph-checkout-ceskaposta-info-box {
    /*display: inline-block;*/
    clear:both;
-   display: inline-flex;
+   display: block;
    margin: 0;
    padding: 0;
    padding-left: 0.25em;
 }
-
+/*
 .ph-checkout-ceskaposta-box {
     container-type: inline-size;
     container-name: phCheckoutCeskapostaBox;
 }
 
-@container phCheckoutCeskapostaBox (max-width: 15em) {
+@container phCheckoutCeskapostaBox (max-width: 46em) {
     .ph-checkout-shipping-info-box.ph-checkout-ceskaposta-info-box {
         display:block;
     }
@@ -32,29 +33,33 @@
     container-name: phCheckoutShippingRowItem;
 }
 
-@container phCheckoutShippingRowItem (max-width: 34em) {
+@container phCheckoutShippingRowItem (max-width: 46em) {
     .ph-checkout-shipping-info-box.ph-checkout-ceskaposta-info-box {
         display: block;
     }
 }
-
+*/
 .ph-checkout-ceskaposta-info-name {
     padding: 0.5em;
 }
 .ph-checkout-ceskaposta-info-container {
     margin-top: 0.5em;
-    display: flex;
-    flex-wrap: wrap;
+   /* display: flex;
+    flex-wrap: wrap;*/
 }
 .ph-checkout-ceskaposta-info-label {
     padding-top: 0;
 }
 
+.ph-checkout-ceskaposta-info-opening-hours {
+    padding: 0.5em;
+}
+
 .ph-checkout-ceskaposta-box .ph-checkout-ceskaposta-info-opening-hours {
-    padding: 0;
+    padding: 0.5em;
     font-size: small;
-    margin-left: -1em;
-    margin-right: -1em;
+   /* margin-left: -1em;
+    margin-right: -1em;*/
 }
 
 .ph-checkout-ceskaposta-info-opening-hours > div{
@@ -63,8 +68,15 @@
     grid-gap: 0.25rem;
 }
 
-.ph-checkout-ceskaposta-info-opening-hours > div > div{
-    
+.ph-checkout-ceskaposta-info-box {
+    container-type: inline-size;
+    container-name: phCheckoutShippingInfoBox;
+}
+
+@container phCheckoutShippingInfoBox (max-width: 12em) {
+    .ph-checkout-ceskaposta-box .ph-checkout-ceskaposta-info-opening-hours {
+        padding: 0;
+    }
 }
 
 .ph-checkout-ceskaposta-info-photo img {
