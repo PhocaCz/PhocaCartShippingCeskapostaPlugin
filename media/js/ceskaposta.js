@@ -65,18 +65,27 @@ async function showCeskapostaSelectedPickupPoint(point) {
         if (phParamsPlgPcsCeskaposta[selectedShippingMethod]['display_opening_hours'] == 1) {
             if (point.opening_hours) {
                 point.opening_hours.forEach((val, idx) => {
+
                     if (val) {
                         let values = val['od_do'];
-                        if (!Array.isArray(values)) {
-                            values = [values];
+
+                        if (!values && val[0] && val[0]['od'] !== undefined && val[0]['do'] !== undefined) {
+                            values = [val[0]];
                         }
-                        
-                        openHours += '<div><div>' + phGetCeskapostaDay(idx) + '</div><div>' + values[0]['od'] + ' - ' + values[0]['do'];
-                        if (values.length > 1) {
-                            openHours += ', ' + values[1]['od'] + ' - ' + values[1]['do'];
+
+                        if (values) {
+                            if (!Array.isArray(values)) {
+                                values = [values];
+                            }
+
+                            openHours += '<div><div>' + phGetCeskapostaDay(idx) + '</div><div>' + values[0]['od'] + ' - ' + values[0]['do'];
+
+                            if (values.length > 1 && values[1]) {
+                                openHours += ', ' + values[1]['od'] + ' - ' + values[1]['do'];
+                            }
+
+                            openHours += '</div></div>';
                         }
-                        openHours +=  '</div></div>';
-                        
                     }
                 });
                 info += '<div class="ph-checkout-ceskaposta-info-opening-hours">' + openHours + '</div>';
