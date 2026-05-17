@@ -6,32 +6,12 @@
 		<element>shipping_ceskaposta</element>
 		<folder>pcs</folder>
 		<type>plugin</type>
-		<version>5.0.2</version>
-		<infourl title="Phoca Cart Shipping Česká pošta Plugin 5.0.2">https://www.phoca.cz/</infourl>
+		<version>6.1.0</version>
+		<infourl title="Phoca Cart Shipping Česká pošta Plugin 6.1.0">https://www.phoca.cz/</infourl>
 		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/PhocaCz/PhocaCartShippingCeskapostaPlugin/releases/download/5.0.2/plg_pcs_shipping_ceskaposta_v5.0.2.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://github.com/PhocaCz/PhocaCartShippingCeskapostaPlugin/releases/download/6.1.0/plg_pcs_shipping_ceskaposta_v6.1.0.zip</downloadurl>
 		</downloads>
-		<tags>
-			<tag>stable</tag>
-		</tags>
-		<maintainer><![CDATA[ Phoca.cz ]]></maintainer>
-		<maintainerurl>https://www.phoca.cz/</maintainerurl>
-		<section>Updates</section>
-		<targetplatform name="joomla" version="5\.*"/>
-		<client>site</client>
-	</update>
-	<update>
-		<name><![CDATA[ Phoca Cart Shipping Česká pošta Plugin ]]></name>
-		<description><![CDATA[ Phoca Cart Shipping - Shipping Česká pošta Plugin - shipping method for Phoca Cart component. ]]></description>
-		<element>shipping_ceskaposta</element>
-		<folder>pcs</folder>
-		<type>plugin</type>
-		<version>6.0.0</version>
-		<infourl title="Phoca Cart Shipping Česká pošta Plugin 6.0.0">https://www.phoca.cz/</infourl>
-		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/PhocaCz/PhocaCartShippingCeskapostaPlugin/releases/download/6.0.0/plg_pcs_shipping_ceskaposta_v6.0.0.zip</downloadurl>
-		</downloads>
-		<sha512>fd8581b02ee3d19af29671936149eba086495d47e0bbfff676a0966a1db9774e74ba60d1de409220386eaa895cc6fdd9edf83889993ba4e4ca56d1c0e07f7677</sha512>
+		<sha512>7dd178bf108f5681b7e25432932d31e66a274b2ef9f3cdc08460e474e64ac23926805e137ef2af8b43fb30d46f186f5378b70eee6416762eccd01dc0fddd845b</sha512>
 		<tags>
 			<tag>stable</tag>
 		</tags>
